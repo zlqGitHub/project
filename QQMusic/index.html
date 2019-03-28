@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>QQ音乐</title>
+    <link rel="stylesheet" href="./CSS/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+  </head>
+  <body>
+    <div class="header">
+      <h2>QQ音乐</h2>
+      <ul>
+        <li>登录</li>
+        <li>设置</li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="container-in">
+        <div class="container-left">
+          <div class="container-toolbar">
+            <span><i></i>收藏</span>
+            <span><i></i>添加到</span>
+            <span><i></i>下载</span>
+            <span><i></i>删除</span>
+            <span><i></i>清空列表</span>
+          </div>
+          <div class="container-list" d ata-mcs-theme="minimal-dark">
+             <ul>
+               <li class="list-title">
+                 <div class="list-check"><i></i></div>
+                 <div class="list-number"></div>
+                 <div class="list-name">歌曲</div>
+                 <div class="list-singer">歌手名</div>
+                 <div class="list-time">时长</div>
+               </li>
+             </ul>
+          </div>
+        </div>
+
+        <div class="container-right">
+           <div class="song-info">
+            <a href="javascript:;" class="song-info-pic">
+             <img src="./images/zlq.jpg" alt="">
+            </a>
+            <div class="song-info-name">歌曲名称：
+              <a href="javascript:;">强军战歌</a>
+            </div>
+            <div class="song-info-singer">歌手名：
+              <a href="javascript:;">张利强</a>
+            </div>
+            <div class="song-info-ablum">专辑名：
+              <a href="javascript:;">军哥系列</a>
+            </div>
+           </div>
+           <div class="song-container-lyric">
+              <ul class="song-lyric">
+           </ul>
+           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-in">
+        <a href="javascript:;" class="music-pre"></a>
+        <a href="javascript:;" class="music-play"></a>
+        <a href="javascript:;" class="music-next"></a>
+        <div class="music-progress-info">
+           <div class="music-progress-top">
+              <span class="music-progress-name">强军战歌/张利强</span>
+              <span class="music-progress-time">00:00 / 04:38</span>
+           </div>
+           <div class="music-progress-bar">
+              <div class="music-progress-line">
+                  <div class="music-progress-dot"></div>
+              </div>
+           </div>
+        </div>
+        <a href="javascript:;" class="music-mode"></a>
+        <a href="javascript:;" class="music-fav"></a>
+        <a href="javascript:;" class="music-down"></a>
+        <a href="javascript:;" class="music-comment"></a>
+        <a href="javascript:;" class="music-only"></a>
+        <div class="music-voice">
+          <a href="javascript:;" class="music-voice-icon"></a>
+          <div class="music-voice-bar">
+              <div class="music-voice-line">
+                  <div class="music-voice-dot"></div>
+              </div>
+           </div>
+        </div>
+      </div> 
+    </div>
+    <div class="mask-bg"></div>
+    <div class="mask"></div>
+    <audio src=""></audio>
+    <script src="./JS/jquery-3.3.1.min.js"></script>
+    <script src="./JS/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="./JS/player.js"></script>
+    <script src="./JS/progress.js"></script>
+    <script src="./JS/lyric.js"></script>
+    <script src="./JS/index.js"></script>
+  </body>
+</html>
