@@ -22,11 +22,12 @@
 	    	var $this = this;
 	    	//使用ajax()引入外部文件
 			$.ajax({
-				url: this.path,
+				url: $this.path,
 				dataType: "text",   //文件类型是文本格式
 				success: function(data){
 					//调用解析歌词的方法
 					$this.parseLyric(data);
+					// console.log($this);
 					//歌词加载完毕执行一下回调
 					callBack();
 				},

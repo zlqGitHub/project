@@ -22,7 +22,8 @@ $(function(){
 				$.each(data,function(index,ele){
                    var $item = createMusicItem(index,ele);
                    $(".container-list ul").append($item);
-				});			    
+				});
+				//初始化时默认是第一条数据的信息
 			    //初始化歌曲信息
 			    initMusicInfo(data[0]);
 			    //初始化歌词信息
@@ -61,11 +62,13 @@ $(function(){
 	function initMusicLyric(music){
 		//实例化一个歌词相关的对象
 		lyric = new Lyric(music.link_lrc);
+		console.log(lyric);  //初始化的init对象  init {path: "./source/告白气球.txt"}
 		var $lyricContainer = $(".song-lyric");
 		//清空上一首音乐的歌词
-		$lyricContainer.html(""); 
+		$lyricContainer.html("");
 		lyric.loadLyric(function(){
-			//遍历创建歌词列表
+			// console.log(lyric.lyrics);
+			//遍历创建歌词列表,并将其加入到ul下
 			$.each(lyric.lyrics,function(index,ele){
 				var $item = $("<li>" +ele+ "</li>");
                 $lyricContainer.append($item);
@@ -158,7 +161,21 @@ $(function(){
 	    	var $item = $(this).parents(".list-menu");
 	    	//调用播放音乐的方法
 	    	player.playMusic($item.get(0).index,$item.get(0).music);
-            //切换音乐信息
+			// console.log($item.get(0).music);
+			//切换网站头部文字的显示
+			$("head title").text(" 正在播放 "+$item.get(0).music.name+"-"+$item.get(0).music.singer);
+			// console.log(console.log($("head title").text().split("")));
+			//实现title中文字的滚动效果
+			var arr = $("head title").text().split("");
+			function fun(){
+				arr.push(arr[0]);
+				arr.shift(arr[0]);
+				// console.log(arr.join(""));
+				$("head title").text(arr.join(""));
+			}
+			setInterval(fun,1000);
+
+			//切换音乐信息
             initMusicInfo($item.get(0).music);
             //切换歌词信息
             initMusicLyric($item.get(0).music);
@@ -230,12 +247,13 @@ $(function(){
 
 	    //监听播放的速度
 	    player.musicTimeUpdate(function(currentTime,duration,timeStr){
+	    	// console.log(currentTime,duration,timeStr);  //格式:2.358558 215.196735 "00:02 / 03:35"
 	    	//同步时间
 	    	$(".music-progress-time").text(timeStr);
 	    	//同步进度条
 	    	//计算播放的比例
 	    	var value = currentTime/duration *100;
-	    	progress.setProgress(value);
+	    	progress.setProgress(value);  //设置进度条位置
 	    	//实现歌词的同步
 	    	var index = lyric.currentIndex(currentTime);
 	    	var $item = $(".song-lyric li").eq(index);
@@ -264,7 +282,6 @@ $(function(){
 	   
     }
 
-
 	//创建li元素，创建每一条音乐
 	function createMusicItem(index,music){
 		//创建li元素
@@ -285,6 +302,7 @@ $(function(){
                    "<a href='javascript:;' title='删除' class='del'></a>"+
                  "</div>"+
                "</li>");
+		//便于获取歌曲
 		$item.get(0).index = index;
 		$item.get(0).music = music;
 		return $item;

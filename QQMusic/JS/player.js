@@ -12,8 +12,8 @@
 		//初始化属性
 		init: function($audio){
 			//添加属性
-		    this.$audio = $audio;
-		    this.audio = $audio.get(0);
+		    this.$audio = $audio;  //audio标签，jQuery对象
+		    this.audio = $audio.get(0);   //audio中的内容
 		},
    
         currentIndex: -1,
@@ -66,6 +66,10 @@
 		//添加一个删除数据的方法
 		changeMusic: function(index){
 			this.musicList.splice(index,1);
+			// 判断当前删除的是否是正在播放音乐的前面的音乐
+			if(index < this.currentIndex){
+				this.currentIndex = this.currentIndex - 1;
+			}
 		},
 
 		//添加一个处理播放速度的方法
@@ -76,7 +80,8 @@
 		    this.$audio.on("timeupdate",function(){
 		    	var duration = $this.audio.duration;
 		    	var currentTime = $this.audio.currentTime;
-		    	//格式化后的字符串
+				// console.log(currentTime);
+				//格式化后的字符串
 		    	var timeStr = $this.formateDate(currentTime,duration);
 		    	callBack(currentTime,duration,timeStr);
 		    });
@@ -103,11 +108,10 @@
 	    	if(startSec < 10){
 	    		startSec = "0" + startSec;
 	    	}
-
 	    	//拼接
 	    	return startMin +":"+ startSec +" / "+ endMin +":" +endSec
 		},
-		//新增一个跳转的方法
+		//新增一个点击跳转的方法
 		musicSeekTo: function(value){
 			if(isNaN(value)) return;
 			this.audio.currentTime = this.audio.duration*value;
