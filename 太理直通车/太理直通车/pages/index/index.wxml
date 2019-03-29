@@ -1,0 +1,14 @@
+<view class='logo'>
+    <image src='../../resources/images/logo.jpg'></image>
+  </view>
+<view class='introduce' bindtap='introBtn'>
+  <view class='btn'>
+    学校简介
+  </view>
+</view>
+<view class='watch' bindtap='watchBtn'>
+  <view class='btn'>
+    逛逛理工
+  </view>
+</view>
+

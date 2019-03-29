@@ -1,0 +1,43 @@
+page{
+  width: 100%;
+  height: 100%;
+  background: url("https://cloud-minapp-18590.cloud.ifanrusercontent.com/1h2Deisf9DgNmejD.jpg") no-repeat; 
+  background-size: 100% 100%;
+}
+.logo,.introduce,.watch{
+  width: 142rpx;
+  height: 142rpx;
+  background: #273A87;
+  border-radius: 50%;
+  position: relative;
+  left: 50%;
+  margin-left: -71rpx;
+  color: #FFF;
+  text-align: center;
+  font-size: 38rpx;
+}
+.logo{
+  top: 80rpx;
+  margin-left: -70rpx;
+  overflow: hidden;
+}
+.logo image{
+  width: 142rpx;
+  height: 142rpx;
+}
+.introduce{
+  top:120rpx;
+}
+.watch{
+  top:160rpx;
+}
+.introduce .btn,.watch .btn{
+  width: 76rpx;
+  height: 86rpx;
+  line-height: 43rpx;
+  position: absolute;
+  top: 28rpx;
+  left: 37rpx;
+}
+
+

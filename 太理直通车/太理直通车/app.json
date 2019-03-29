@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/introduce/introduce",
+    "pages/navService/navService",
+    "pages/detail/detail",
+    "pages/test/test"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#273A87",
+    "navigationBarTitleText": "太原理工大学",
+    "navigationBarTextStyle":"white"
+  }
+}

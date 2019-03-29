@@ -1,0 +1,198 @@
+page{
+  background: #F3EFF2;
+  position: fixed;
+}
+/* 顶部信息 */
+.navService{
+  width: 100%;
+  height: 100vh;
+}
+.navTop{
+  height: 106rpx;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  min-width: 100%;
+  background:#273A87;
+  color: #ffffff;
+}
+.weui-btn-area{
+  /* width: 181rpx; */
+  height: 40rpx;
+  line-height: 40rpx;
+  position: absolute;
+  top: -28rpx;
+}
+.weui-btn-area .left{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  background: #195bd6;
+  float: left;
+}
+.weui-btn-area .center{
+  width: 150rpx;
+  height: 40rpx;
+  background:#195bd6;
+  z-index: 100;
+  float: left;
+  margin-left: -25rpx;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+.weui-btn-area .right{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  float: right;
+  margin-left: -25rpx;
+  background:#195bd6;
+}
+.campus{
+  line-height: 70rpx;
+  vertical-align: middle;
+  font-size: 30rpx;
+  color: #FFF;
+}
+.navTop-lbs__items{
+  position: relative;
+  left: 40rpx;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  padding: 0rpx 20rpx;
+  width: 540rpx; 
+  height: 106rpx;
+  float: right;
+  line-height: 100rpx;
+}
+.navTop-list-item{
+  display: inline-block;
+  /* height: 106rpx; */
+}
+.navTop-list-item__title{
+  display: inline-block;
+  margin-right: 40rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  font-family: 'iconfont';
+  line-height: 30rpx;
+  height: 50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  white-space: nowrap;
+  font-weight: 200;
+  color: #FFF;
+}
+.topOf{
+  top: -10rpx;
+}
+.ord_campus{
+  position: relative;
+  top: -10rpx;
+}
+.active-top-border {
+  border-bottom: 4rpx solid #ffffff;
+}
+
+/* 中间地图样式 */
+map {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 90rpx;
+  left: 0;
+  right: 0;
+  bottom: 375rpx;
+}
+.iPhoneX_position{
+  top: 170rpx;
+}
+.position{
+  top: 90rpx;
+}
+.mapChange {
+  bottom: 80rpx;
+}
+
+/* 底部样式 */
+.navBottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  min-width: 100%;
+  height: auto;
+  background: #FFF;
+}
+.navBottom_tip{
+  letter-spacing: 2rpx;
+  border-bottom: 1rpx solid #eee;
+  width: 100vw;
+  padding: 20rpx 0;
+  text-align: center;
+  font-size: 24rpx;
+  color: #273A87;
+  position: relative;
+}
+.up,.down{
+  display: inline-block;
+  width: 24rpx;
+  height: 24rpx;
+}
+.down{
+  background:url("https://cloud-minapp-18590.cloud.ifanrusercontent.com/1h2BYJ83FN3o6doR.png") no-repeat 0 4rpx;
+  background-size: 24rpx 24rpx;
+}
+.up{
+  background:url("https://cloud-minapp-18590.cloud.ifanrusercontent.com/1h2BckCQHhagcQfs.png") no-repeat 0 4rpx;
+  background-size: 24rpx 24rpx;
+}
+.navBottom_show_imgs{
+  width: 100vw;
+  height: 300rpx;
+}
+.scroll-view-x{
+  /* width: 100%; */
+  white-space: nowrap; /* 指定元素内的空白不换行 */
+}
+.list-item{
+  width: 35%;   
+  height: 260rpx;
+  overflow: hidden;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+  display: inline-block;    /* 给需要滑动的元素进行一个横向编排 */
+}
+.list-item:last-child{
+  margin-right: 20rpx;
+}
+.list-item .img{
+  width: 100%;
+  height: 210rpx;
+}
+.shadow{
+  width: 262.5rpx;
+  height: 658rpx;
+  background: black;
+  opacity: 0.3;
+  z-index: 102;
+  position: relative;
+  top: -290rpx;
+  color:#FFF;
+}
+.list-item .title{
+  width: 100%;
+  height: 65rpx;
+  position: relative;
+  top: -15rpx;
+}
+.list-item .title p{
+  display: block;
+  overflow: hidden;
+  font-size: 30rpx;
+}

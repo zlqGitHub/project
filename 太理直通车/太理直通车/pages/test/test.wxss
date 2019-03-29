@@ -1,0 +1,14 @@
+/* pages/test/test.wxss */
+.img{
+  width: 100%;
+  height: 520rpx;
+  margin-top: 40rpx;
+}
+.shadow{
+  width: 100%;
+  height: 520rpx;
+  position: relative;
+  background: black;
+  opacity: 0.2;
+  top: -540rpx;
+}

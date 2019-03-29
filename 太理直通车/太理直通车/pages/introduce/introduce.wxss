@@ -1,0 +1,105 @@
+/* pages/introduce/introduce.wxss */
+@import '../../wxParser/index.wxss';
+.swiper{
+  width: 100%;
+  height: 480rpx;
+}
+.swiper image{
+  width: 100%;
+  height: 100%;
+}
+.navBtn{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background: #273A87;
+  color: #FFF;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  padding: 30rpx;
+  position: relative;
+  top: -60rpx;
+  left: 600rpx;
+}
+.title{
+  display: block;
+  font-size: 50rpx;
+  color: #273A87;
+  margin-top: -55rpx;
+  margin-left: 45rpx;
+}
+.enName{
+  display: block;
+  font-size: 35rpx;
+  color: #273A87;
+  margin-top: 20rpx;
+  margin-left: 45rpx;
+}
+.myAudio{
+  display: block;
+  width: 608rpx;
+  margin: 40rpx 71rpx;
+}
+.content{
+  height: auto;
+  padding: 10rpx 45rpx;
+  font-size: 30rpx;
+  color: #454240;
+}
+.goTop{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 100rpx;
+  right: 30rpx;
+  background: #000000;
+  opacity:0.5;
+}
+.goTop image{
+  width: 60rpx;
+  height: 60rpx;
+  position: relative;
+  top: 15rpx;
+  left: 15rpx;
+}
+.shareBtn{
+  width: 116rpx;
+  height: 116rpx;
+  border-radius: 50%;
+  margin: -15rpx auto 40rpx;
+  border: none;
+}
+.shareBtn::after{ 
+  border: none; 
+}
+.share{
+  width: 116rpx;
+  height: 116rpx;
+  position: relative;
+  left: -30rpx;
+}
+.bottom{
+  width: 100%;
+  height: 150rpx;
+  background: #273A87;
+  color: #A2D0F6;
+  font-size: 28rpx;
+  text-align: center;
+  padding-top: 15rpx;
+}
+.bottom p{
+  display: block;
+  line-height: 45rpx;
+}
+.version{
+  width: 100%;
+  height: 70rpx;
+  text-align: center;
+  background: #031F47;
+}
+.version p{
+  line-height: 70rpx;
+  font-size: 24rpx;
+  color: #C0DCFF;
+}

@@ -1,0 +1,60 @@
+<view class="navService">
+  <view class='navTop'>
+
+    <!-- 切换校区 -->
+    <picker bindchange="bindPickerChange"  value="{{index}}" range="{{campus}}">
+      <view class="weui-btn-area {{isIphoneX ? 'topOf' : ''}}">
+        <view class='left'></view>
+        <view class='center'>{{campus[index]}}</view>
+        <view class='right'></view>
+      </view>
+    </picker>
+    <!-- 导航栏 -->
+    <view class="navTop-lbs__items">
+      <scroll-view scroll-x="true">
+        <block wx:for="{{nowTypes}}" wx:key="true">
+          <view class="navTop-list-item"  data-cate="{{item}}" data-index="{{index}}" bindtap="categoryChange">
+            <view class="navTop-list-item__title {{activeCategory == item ? 'active-top-border' : ''}} {{isIphoneX ? 'ord_campus' : ''}}">{{ item }}</view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+
+  <!-- 中间地图  -->
+  <map
+    class="{{ !isShow ? 'mapChange' : ''}} {{isIphoneX ? 'iPhoneX_position' : 'position'}}"
+    longitude="{{ coreLongitude }}"
+    latitude="{{ coreLatitude }}"
+    scale="{{ scale }}"
+    show-location
+    markers="{{ markers }}"
+    bindmarkertap="markerTap"
+    >
+  </map>
+
+  <!-- 底部显示 -->
+  <view class="navBottom">
+    <view class="navBottom_tip" bindtap="changeHeight">
+      共有 {{nowShow.length}} 个{{activeCategory}} <p class="{{ isShow ? 'up':'down'}}"></p>
+    </view>
+    <!-- 显示图片 -->
+    <view class='navBottom_show_imgs' hidden="{{ !isShow }}">
+      <scroll-view class='scroll-view-x' scroll-x="true" scroll-left="{{scrollLeft}}">
+        <block wx:for="{{nowShow}}" wx:key="true">
+          <navigator class="list-item" url='../detail/detail?img={{item.img}}&title={{item.title}}&longitude={{item.longitude}}&latitude={{item.latitude}}&des={{item.des}}'>
+            <image class="img" src='{{item.img[0]}}' lazy-load='true'  cache='true'></image>
+            <view class='title'>
+              <p>{{item.title}}</p>
+            </view>
+            <!-- ===严格相等，不进行类型转换 -->
+            <view class='{{index === activeMarkerIndex ? "shadow" : ""}}'></view>
+          </navigator>
+        </block>
+      </scroll-view>
+
+    </view>
+
+  </view>
+
+</view>

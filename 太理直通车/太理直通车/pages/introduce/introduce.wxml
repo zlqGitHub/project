@@ -1,0 +1,40 @@
+<import src="../../wxParser/index.wxml"/>
+<swiper class='swiper' indicator-dots="{{indicatorDots}}" indicator-active-color='{{indicatorActiveColor}}' autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+  <block wx:for="{{imgUrls}}" wx:key="true">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class='navBtn' bindtap='mapNav'>
+  畅游校园
+</view>
+<p class='title'>太原理工大学简介</p>
+<p class='enName'>Taiyuan University</p>
+
+<audio class='myAudio' poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
+
+<view class='content wxParser'>
+  <template is="wxParser" data="{{wxParserData:richText.nodes}}"/>
+</view>
+<!-- 回到顶部 -->
+<view class='goTop' hidden='{{showTop}}' bindtap='goTop'>
+  <image src='../../resources/images/goTop.png'></image>
+</view>
+
+<!-- 分享按钮 -->
+<button class='shareBtn' open-type='share'>
+  <image class='share' src='../../resources/images/share.png'></image>
+</button>
+
+<view class='bottom'>
+  <p>技术支持</p>
+  <p>中北大学软件学院--张利强</p>
+  <p>太原理工大学材料科学与工程学院--吕子宇</p>
+</view>
+
+<view class='version'>
+  <p>版本：v1.0.0</p>
+</view>
+
+
