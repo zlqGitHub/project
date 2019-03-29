@@ -1,0 +1,54 @@
+.cropper-wrapper {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #e5e5e5;
+}
+
+.cropper-buttons {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: rgba(0,0,0,0.95);
+    color: #04b00f;
+    font-size: 32rpx;
+}
+
+.cropper-buttons .upload,.cropper-buttons .getCropperImage {
+    width: 50%;
+    text-align: center;
+}
+
+.cropper {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

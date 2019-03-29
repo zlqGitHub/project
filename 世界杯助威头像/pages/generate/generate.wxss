@@ -1,0 +1,131 @@
+.avatar-block {
+    height: 660rpx;
+    background: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.avatar-block .wrap {
+    width: 420rpx;
+    height: 420rpx;
+    align-self: center;
+    position: relative;
+}
+
+.avatar-block .wrap image {
+    top: 0;
+    left: 0;
+    width: 420rpx;
+    height: 420rpx;
+    position: absolute;
+}
+
+.action-block {
+    width: 100%;
+    position: absolute;
+    height: 560rpx;
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.action-block .hint {
+    font-size: 30rpx;
+    color: #111;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.action-block .btn-block {
+    margin: 80rpx 80rpx 134rpx 80rpx;
+}
+
+.action-block .btn-block .btn {
+    width: 280rpx;
+    height: 88rpx;
+    color: #fff;
+    font-size: 34rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 44rpx;
+    box-shadow: 0 2rpx 4rpx rgba(0,0,0,0.2);
+    background-image: linear-gradient(to bottom,#0f64a6,#0f3f79);
+}
+
+.ad-block {
+    width: 100%;
+    height: 220rpx;
+    position: fixed;
+    bottom: 0;
+    background: #ecf1f3;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.ad-block navigator {
+    width: 100%;
+    height: 180rpx;
+    margin: 0 20rpx;
+}
+
+.ad-block navigator image {
+    width: 100%;
+    height: 180rpx;
+}
+
+.alert-panel {
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    opacity: 1;
+    transition-property: opacity;
+    transition-delay: 5s;
+    transition-duration: .5s;
+}
+
+.alert-panel .wrap {
+    width: 100%;
+    height: 320rpx;
+    margin: 380rpx 90rpx;
+    border-radius: 8rpx;
+    background: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0 50rpx;
+}
+
+.alert-panel .wrap text {
+    font-size: 32rpx;
+    line-height: 56rpx;
+}
+
+.hide-style {
+    opacity: 0;
+}

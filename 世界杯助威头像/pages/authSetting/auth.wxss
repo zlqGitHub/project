@@ -1,0 +1,68 @@
+.authorize {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-left: 60rpx;
+    padding-right: 60rpx;
+}
+
+.authorize image {
+    margin-top: 120rpx;
+    width: 160rpx;
+    height: 160rpx;
+    margin-bottom: 80rpx;
+}
+
+.authorize .bold {
+    font-size: 40rpx;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20rpx;
+    font-weight: bold;
+}
+
+.authorize .normal {
+    font-size: 30rpx;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 80rpx;
+}
+
+.authorize button {
+    width: 100%;
+    height: 88rpx;
+    border-radius: 8rpx;
+    background: #fff;
+}
+
+.authorize button view {
+    color: #111;
+    font-size: 34rpx;
+}
+
+.footer-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.footer-wrap .footer {
+    width: 540rpx;
+    height: 240rpx;
+}

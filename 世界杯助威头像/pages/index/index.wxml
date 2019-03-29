@@ -1,0 +1,25 @@
+<view class="container" wx:if="{{!needAuthorize}}">
+    <view class="avatar-block">
+        <view bindtap="chooseImg" class="wrap">
+            <image class="img" src="{{avatar.type?avatar.url:avatar.img}}"></image>
+            <image class="border" src="{{avatar.country_background}}"></image>
+        </view>
+        <text>点击上方头像可以更换图片</text>
+    </view>
+    <text class="scroll-title">选择支持的球队</text>
+    <scroll-view scrollX class="country-scroll">
+        <view bindtap="selectCountry" class="block" data-index="{{index}}" wx:for="{{country}}">
+            <view class="country-wrap">
+                <image class="flag {{item.select?'flag-select':''}}" src="{{item.country_flag}}"></image>
+                <text class="{{item.select?'name-select':''}}">{{item.country_name}}</text>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="done-block">
+        <form reportSubmit bindsubmit="formSubmit" class="form">
+            <button bindtap="done" class="done" formType="submit">
+                <view>生成头像</view>
+            </button>
+        </form>
+    </view>
+</view>

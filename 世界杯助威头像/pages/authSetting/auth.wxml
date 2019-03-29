@@ -1,0 +1,13 @@
+<view class="container">
+    <view class="authorize">
+        <image src="./../../img/logo.png"></image>
+        <text class="bold">世界杯助威头像</text>
+        <text class="normal">我们需要获取你的头像信息，生成图片</text>
+        <button bindgetuserinfo="bindGetUserInfo" openType="getUserInfo">
+            <view>允许授权</view>
+        </button>
+    </view>
+    <view class="footer-wrap">
+        <image class="footer" src="./../../img/footer_pic.png"></image>
+    </view>
+</view>

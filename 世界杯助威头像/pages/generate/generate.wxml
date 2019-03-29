@@ -1,0 +1,29 @@
+<view class="container" style="background: #fff">
+    <view class="avatar-block">
+        <view class="wrap">
+            <image class="img" src="{{generateUrl}}"></image>
+        </view>
+        <text></text>
+    </view>
+    <view class="action-block">
+        <text class="hint">👇 马上保存图片，到个人资料里换上吧</text>
+        <view class="btn-block flex-between">
+            <button bindtap="saveToAlbum" class="btn" id="save">
+                <view>保存头像</view>
+            </button>
+            <button class="btn" id="share" openType="share">
+                <view>推荐给好友</view>
+            </button>
+        </view>
+        <view bindtap="report" class="ad-block">
+            <navigator appId="wxb86824b0ac9892b3" class="ad-nav" extraData="" openType="navigate" path="" target="miniProgram" version="release">
+                <image src="{{adUrl}}"></image>
+            </navigator>
+        </view>
+    </view>
+</view>
+<view bindtap="hideAlert" class="alert-panel {{hideStyle}}" wx:if="{{!hide}}">
+    <view class="wrap">
+        <text class="title">生成成功！请点击“保存”按钮，保存图片到手机相册，再到微信个人资料里换上即可。</text>
+    </view>
+</view>

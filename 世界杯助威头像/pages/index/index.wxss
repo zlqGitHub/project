@@ -1,0 +1,160 @@
+.avatar-block {
+    height: 660rpx;
+    background: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.avatar-block .wrap {
+    width: 420rpx;
+    height: 420rpx;
+    align-self: center;
+    position: relative;
+}
+
+.avatar-block .wrap image {
+    top: 0;
+    left: 0;
+    width: 420rpx;
+    height: 420rpx;
+    position: absolute;
+}
+
+.avatar-block text {
+    color: #666;
+    font-size: 30rpx;
+    margin-top: 60rpx;
+}
+
+.scroll-title {
+    display: block;
+    color: #fff;
+    font-size: 30rpx;
+    text-align: center;
+    margin-top: 60rpx;
+}
+
+.country-scroll {
+    margin-top: 50rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 130rpx;
+    overflow-x: auto;
+}
+
+.country-scroll .block {
+    display: inline-block;
+}
+
+.country-scroll .block .country-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    margin-right: 40rpx;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.country-scroll .block .country-wrap image {
+    width: 120rpx;
+    height: 80rpx;
+}
+
+.country-scroll .block .country-wrap text {
+    color: #fff;
+    font-size: 24rpx;
+    margin-top: 10rpx;
+}
+
+.country-scroll .block .country-wrap .flag-select {
+    border: solid 6rpx #ffd700;
+    border-radius: 10rpx;
+}
+
+.country-scroll .block .country-wrap .name-select {
+    color: #ffd200;
+}
+
+.country-scroll .block:first-child {
+    margin-left: 40rpx;
+}
+
+.done-block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.done-block .form {
+    background: transparent;
+}
+
+.done-block .form .done {
+    border-radius: 50rpx;
+    background: #fff;
+    box-shadow: 0 2rpx 4rpx rgba(0,0,0,0.7);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    color: #111;
+    font-size: 34rpx;
+    width: 280rpx;
+    height: 88rpx;
+    margin-top: 80rpx;
+}
+
+.action-block {
+    width: 100%;
+    position: absolute;
+    height: 560rpx;
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.action-block .hint {
+    font-size: 30rpx;
+    color: #111;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.action-block .btn-block {
+    margin: 80rpx 80rpx 134rpx 80rpx;
+}
+
+.action-block .btn-block .btn {
+    width: 280rpx;
+    height: 88rpx;
+    color: #fff;
+    font-size: 34rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 44rpx;
+    box-shadow: 0 2rpx 4rpx rgba(0,0,0,0.2);
+    background-image: linear-gradient(to bottom,#0f64a6,#0f3f79);
+}
