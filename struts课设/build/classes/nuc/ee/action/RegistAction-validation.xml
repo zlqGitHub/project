@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+ 		<!-- 注册校验器  -->
+<validators>
+	<field name="userid">
+		<field-validator type="int">
+			<param name="min">100</param>
+			<message>请输入学号！</message>
+		</field-validator>
+	</field>
+	
+	<field name="username">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>请输入姓名！</message>
+		</field-validator>
+	</field>
+	
+	<field name="password">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>请输入密码！</message>
+		</field-validator>
+	</field>
+	
+	<field name="rePassword">
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[(password == rePassword)]]></param>
+			<message>密码错误！</message>
+		</field-validator>
+	</field>
+	
+	<field name="age">
+		<field-validator type="int">
+			<param name="min">1</param>
+			<param name="max">100</param>
+			<message>年龄范围为1-100</message>
+		</field-validator>
+	</field>
+	
+	<field name="telphone">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>请输入电话！</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="regexExpression"><![CDATA[(^1[3589]\d{9})]]></param>
+			<message>电话号码格式不正确！</message>
+		</field-validator>
+	</field>
+
+</validators>
+

@@ -1,0 +1,135 @@
+@charset "UTF-8";
+body{
+	margin: 0; 	
+}
+.header{
+	width: 100%;
+	height: 80px;
+	background: #E2EFFF;
+	border-bottom: 2px solid #85B0D8;
+}
+.header img{
+	position: relative;
+	top:10px;
+	left: 300px;
+	margin: auto;
+	float: left;
+}
+.header span{
+	position: relative;
+	left: 310px;
+	line-height: 80px;
+}
+
+.main_bg{
+	width: 100%;
+	height: 200px;
+	background: linear-gradient(to bottom, #9ECEFE,#FFFFFF);
+}
+.span1{
+    display: block;
+    width: 120px;
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    left: 330px;
+    top:40px;
+}
+.tip{
+    display: block;
+    width: 400px;
+    height: 18px;
+    position: relative;
+    top: -20px;
+    line-height: 18px;
+    color: red;
+    text-align: center;
+}
+.form{
+    display: block;
+    background-color: #F0F7FE;
+    width: 400px;
+    height: 350px;
+    padding-top: 40px;
+    position: relative;
+    left: 200px;
+    top:50px;
+    box-shadow: 3px 5px 5px #CECECE;
+}
+.form .input{
+    width: 340px;
+    height: 40px;
+    display: block;
+    border: none;
+    margin: 0 auto 10px;
+    font-size: 18px;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.form .submit,.submit2{
+    width: 340px;
+    height: 45px;
+    display: block;
+    background-color: #85B0D8;
+    border: none;
+    border-radius: 5px;
+    margin: 35px auto;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.form .submit:hover{
+    background-color: #007EFF;
+}
+.form .submit2{
+	width:213px;
+	background:#999;
+	line-height: 45px;
+	padding-left:127px;
+}
+.info{
+    width: 350px;
+    height: 300px;
+    background-color: #007EFF;
+    border-radius: 1px;
+    box-shadow: 4px 6px 5px #85B0D8;
+    position: relative;
+    left: 750px;
+    top:-300px;
+}
+.span2{
+    display: block;
+    width: 120px;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 110px;
+    top:-90px;
+}
+.info_div{
+    width: 280px;
+    height: 35px;
+    line-height: 35px;
+    margin: 0px auto 20px;
+    color: #FFF;
+}
+.info_div div{
+    width: 35px;
+    height: 35px;
+    float: left;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+}
+.info_div img{
+    position: relative;
+    left: 7px;
+    top:6px;
+}
+.info_div .img1{
+    left: 5px;
+}
+.info_span{
+    padding-left: 10px;
+}
+

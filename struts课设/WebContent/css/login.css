@@ -1,0 +1,125 @@
+@charset "UTF-8";
+@font-face{
+	font-family: 'SIMHEI';
+	src:url('../fonts/SIMHEI.TTF');
+}
+@font-face{
+	font-family: 'SIMFANG';
+	src:url('../fonts/SIMFANG.TTF');
+}
+body{
+	margin: 0;
+	overflow: scroll;
+}
+.header{
+	margin: 0;
+	width: 100%;
+	height: 80px;
+	/*使用渐变色：background: linear-gradient(to right（左右到右，写为bottom就是从上到下）, 开始的颜色,结束的颜色);*/
+	background: linear-gradient(to bottom, #C1D2E6,#FEFEFE);
+}
+.header a{
+	height: 60px;
+	display: inline-block;
+	text-decoration: none;   /* 去掉超链接下划线 */
+	position: relative;
+	top: 40px;
+	left: 210px;
+}
+.header img{
+	float: left;
+}
+.header span{
+	color: #4099E3;
+	line-height: 60px;
+	font-family: 'SIMHEI';
+	font-size: 25px;
+	font-weight: 900;
+}
+
+.main{
+	width: 900px;
+	height: 345px;
+	background: #83A4D1;
+	margin: 50px auto;
+	border:3px solid #C3D5EB;
+	border-radius: 5px;
+	box-shadow: 0 20px 5px #EDF2F8;
+}
+.main_left{
+	width: 480px;
+	height: 345px;
+	/*border:3px solid #C3D5EB;*/
+	float: left;
+}
+.main_right{
+	width: 317px;
+	height: 381px;
+	background: #E7F1FD;
+	float: left;
+	position: relative;
+	top: -10px;
+	text-align: center;
+	border:4px solid #B2CAEC;
+	border-radius: 10px;
+	box-shadow: 0 10px 5px #EDF2F8;
+}
+.main_right span{
+	display:inline-block;
+	color: #2C6CB4;
+	font-family: 'SIMHEI';
+	font-size: 25px;
+	font-weight: 700;
+	letter-spacing: 5px;
+	margin: 25px auto;
+}
+input,.wwFormTable{
+	width: 245px;
+	height: 35px;
+	padding-left: 5px;
+	border-radius: 5px;
+	border:1px solid #E7F1FD;
+	margin: 10px auto;
+}
+.main_right a{
+	text-decoration: none;
+}
+.bottom{
+	width: 100%;
+	height: 30px;
+	margin: 80px auto;
+	text-align: center;
+	font-size: 12px;
+	color: #676767;
+}
+.bottom span{
+	display: inline-block;
+	margin: 2px auto;	
+}
+
+.errorMessage li{
+	list-style:none;
+	height:0;
+}
+.errorMessage li span{
+	font-family:SIMFANG;
+	list-style:none;
+	color:red;
+	font-size:14px;
+	line-height:15px;
+	display:inline-block;
+	position: relative;
+	top:-15px;
+	left:-15px;
+}
+.block{
+	display:block;
+	opacity:0.2;
+	position: relative;
+	filter:Alpha(opacity=30);
+	top:-112px;
+	left: 255px;
+	cursor: pointer;
+}
+
+

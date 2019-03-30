@@ -1,0 +1,125 @@
+@charset "UTF-8";
+body{
+	margin: 0; 	
+}
+.header{
+	width: 100%;
+	height: 80px;
+	background: #E2EFFF;
+	border-bottom: 2px solid #85B0D8;
+}
+.header img{
+	position: relative;
+	top:10px;
+	left: 300px;
+	margin: auto;
+	float: left;
+}
+.header span{
+	position: relative;
+	left: 310px;
+	line-height: 80px;
+}
+
+.main_bg{
+	width: 100%;
+	height: 200px;
+	background: linear-gradient(to bottom, #9ECEFE,#FFFFFF);
+}
+.regist{
+	width: 700px;
+	height: 500px;
+	background: #999;
+	margin:auto;
+	position: relative;
+	top: 15px;
+}
+.regist_left{
+	width: 25%;
+	height: 500px;
+	background: #F6F6F6;
+	float: left;
+	box-shadow: 0 5px 5px #CECECE;
+}
+.regist_right{
+	width: 75%;
+	height: 500px;
+	background: #FFF;
+	float: left;
+	box-shadow: 2px 5px 5px #CECECE;
+	text-align: center;
+}
+
+.regist_left span{
+	display: inline-block;
+	text-align: center;
+	margin-top: 20px;
+	width: 175px;
+	height: 40px;
+	border-radius: 2px;
+	background: #56A1E2;
+	line-height: 50px;
+	color: #FFFFFF;
+	font-size: 23px;
+	letter-spacing: 3px;
+}
+input{
+	width: 150px;
+	height: 35px;
+	padding-left: 5px;
+	border-radius: 5px;
+	border:1px solid #E7F1FD;
+	margin: 3px -30px auto;
+	letter-spacing: 0.5px;
+}
+.sex{
+	height:20px;
+}
+.wwFormTable{
+	margin:10px -0px auto;
+	text-align:center;
+}
+.tdLabel{
+	display: inline-block;
+	width:150px;
+	height:40px;
+	line-height:45px;
+	text-align:right;
+}
+.back{
+	width:80px;
+	height:20px;
+	position:relative;
+	left:340px;
+	top:-25px;
+}
+.back a{
+	text-decoration: none;
+	line-height:20px;
+	font-size:12px;
+}
+.back a:hover{
+	color: red;
+}
+
+/* 错误信息提示 */
+.errorMessage{
+	display: block;
+	height:0;
+	color:red;
+	position:relative;
+	left:220px;
+	top:17px;
+}
+
+/* 注册成功后的显示 */
+.success{
+	width:260px;
+	height:260px;
+	position:relative;
+	top:-345px;
+	left:100px;
+}
+
+
+

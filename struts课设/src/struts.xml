@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+    <package name="hello" extends="struts-default">
+    	<action name="UpdateMyInfoAction" class="nuc.ee.action.UpdateMyInfoAction" method="UpdateMyInfoMethod">
+			<result name="updateMyInfoOK">/index.jsp</result>
+		</action>
+    	<action name="GignUpAction2" class="nuc.ee.action.GignUpAction2">
+			<result name="success">/main.jsp</result>
+		</action>
+    	<action name="GignUpAction" class="nuc.ee.action.GignUpAction">
+			<result name="success">/signUp.jsp</result>
+		</action>
+    	<action name="RegistAction" class="nuc.ee.action.RegistAction" method="RegistMethod">
+			<result name="registRepeat">/regist.jsp</result>
+			<result name="registOK">/regist.jsp</result>
+			<result name="input">/regist.jsp</result>
+		</action>
+    	<action name="UpdateCourseAction" class="nuc.ee.action.UpdateCourseAction">
+			<result name="success">/admin/teacher.jsp</result>
+		</action>
+    	<action name="AdminLoginAction" class="nuc.ee.action.AdminLoginAction">
+			<result name="teacher">/admin/teacherAdmin.jsp</result>
+			<result name="ena">/admin/enAdmin.jsp</result>
+			<result name="enb">/admin/enAdmin.jsp</result>
+			<result name="enc">/admin/enAdmin.jsp</result>
+			<result name="loginFail">/admin/index.jsp</result>
+		</action>
+    	<action name="LoginAction" class="nuc.ee.action.LoginAction" method="LoginMethod">
+			<result name="success">./main.jsp</result>
+			<result name="loginFail">./index.jsp</result>
+		</action>
+
+
+		
+		
+		<action name="intoen" class="nuc.ee.action.EnAction" method="inItMethod">
+			<result name="success">
+				/admin/showen.jsp
+			</result>
+		</action>
+		<action name="deleteen" class="nuc.ee.action.EnAction" method="deleteMethod">
+			<result name="success" type="chain">
+				intoen
+			</result>
+		</action>
+		<action name="adden" class="nuc.ee.action.EnAction" method="addMethod">
+			<result name="success" type="chain">
+				intoen
+			</result>
+		</action>
+		<action name="updateen1" class="nuc.ee.action.EnAction" method="update1Method">
+			<result name="success" type="chain">
+				intoen
+			</result>
+		</action>
+		<action name="updateen2" class="nuc.ee.action.EnAction" method="update2Method">
+			<result name="success" type="chain">
+				intoen
+			</result>
+		</action>
+		<action name="selectclass" class="nuc.ee.action.ClassAction" method="selectClass">
+			<result name="success">
+				/admin/showclass.jsp
+			</result>
+		</action>
+		<action name="selectteacher" class="nuc.ee.action.TeacherAction" method="selectTeacher">
+			<result name="success">
+				/admin/showteacher.jsp
+			</result>
+		</action>
+		<action name="addteacher" class="nuc.ee.action.ClassAction" method="updateClass">
+			<result name="success" type="chain">
+				intoen
+			</result>
+		</action>
+		
+		
+		
+		<action name="uploadAction" class="nuc.ee.action.uploadAction" method="InuptUser">
+            <result name="uploadOK">
+              /admin/upload.jsp
+            </result>
+        </action>
+		<action name="classesListAction" class="nuc.ee.action.ClassesAction" method="selectListAll">
+    		<result name="selectListAllOk">/admin/classes.jsp</result>
+    	</action>
+    	
+    	<action name="nameListAction" class="nuc.ee.action.NameListAction" method="selectNameListAll">
+    		<result name="selectNameListAllOk">/admin/nameList.jsp</result>
+    	</action>
+    	
+    	<action name="tdListAction" class="nuc.ee.action.NameListAction" method="selectTdList">
+    		<result name="selectTdListOk">/admin/divideClass.jsp</result>
+    		<result name="input">/admin/divideClass.jsp</result>
+    	</action>
+    	
+    	<action name="enListAction" class="nuc.ee.action.EnAction2" method="selectEnList">
+    		<result name="selectEnListOk" type="chain">tdListAction</result>
+    	</action>
+    	
+    	<action name="selectNameListByTdAction" class="nuc.ee.action.NameListAction" method="nameListPage">
+    		<result name="nameListPageOk" type="chain">enListAction</result>
+    	</action>
+    	
+    	<action name="divideClassAction" class="nuc.ee.action.ClassesAction" method="updateClass">
+    		<result name="updateClassOk" type="chain">selectNameListByTdAction</result>
+    	</action>
+		
+		
+		
+		<action name="QueryAll" class="nuc.ee.action.AdministratorsAction" method="queryAll">
+           <result name="success">/admin/queryall.jsp</result>
+           <result name="error">/admin/error.jsp</result>
+       	</action>
+       	<action name="QueryByClass" class="nuc.ee.action.ClassesAction3" method="queryByClass">
+            <result name="success">/admin/queryclass.jsp</result>
+            <result name="error">/admin/error.jsp</result>
+        </action>
+        <action name="Del" class="nuc.ee.action.ClassesAction3" method="del">
+            <result name="success" type="redirect">QueryAll</result>
+        </action>
+        <action name="QueryUserById" class="nuc.ee.action.ClassesAction3" method="queryUserById">
+            <result name="success">/admin/edit.jsp</result>
+            <result name="error">/admin/error.jsp</result>
+        </action>
+         <action name="UpdateUser" class="nuc.ee.action.ClassesAction3" method="updateUser">
+            <result name="success" type="redirect">QueryAll</result>
+        </action>
+		
+	</package>
+</struts>
