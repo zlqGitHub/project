@@ -5,10 +5,11 @@ function waterFull(parent, child) {
     // 1.2 获取子盒子的宽度
     var boxWidth = allBox[0].offsetWidth;
     // 1.3 获取屏幕的宽度
+    //clientWidth在页面上返回内容的可视宽度
     var screenW = document.documentElement.clientWidth;
     // 1.4 求出列数
     var cols = parseInt(screenW / boxWidth);
-
+    // console.log(cols);    5列
     var xyMargin = 16;
 
 
@@ -28,8 +29,10 @@ function waterFull(parent, child) {
             allBox[i].style.left = i * (boxWidth + xyMargin)+ 'px';
             allBox[i].style.top =  xyMargin + 'px';
         } else { // 剩余行
+            // console.log(heightArr);
             // 1. 取出最矮的盒子高度
             minBoxHeight = _.min(heightArr);
+            console.log(minBoxHeight);
             // 2. 求出最矮盒子对应的索引
             minBoxIndex = getMinBoxIndex(heightArr, minBoxHeight);
             // 3. 子盒子定位
@@ -71,7 +74,10 @@ function checkWillLoadImage() {
     var lastBox = allBox[allBox.length - 1];
 
     // 2. 求出最后一个盒子自身高度的一半 + offsetTop
+    //offsetHeight返回任何一个元素的高度包括边框和填充，但不是边距
+    //offsetTop返回当前元素的相对垂直偏移位置的偏移容器
     var lastBoxDis = lastBox.offsetHeight * 0.5 + lastBox.offsetTop;
+    // console.log(lastBoxDis);
 
     // 3. 求出屏幕的高度
     var screenW = document.body.clientHeight || document.documentElement.clientHeight;

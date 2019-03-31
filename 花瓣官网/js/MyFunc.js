@@ -1,3 +1,4 @@
+//获取窗口高度
 function scroll() {
     if(window.pageYOffset){ // IE9+ 和最新的浏览器
         return {
@@ -10,12 +11,10 @@ function scroll() {
             left: document.documentElement.scrollLeft
         }
     }
-
     return {
         top: document.body.scrollTop,
         left: document.body.scrollLeft
     }
-
 }
 
 function $(id) {

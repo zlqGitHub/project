@@ -52,8 +52,8 @@ function bannerAutoPlay() {
     setInterval(function () {
         // 2.1 改变透明度
         for(var i=0; i<lis.length; i++){
-            var singerLi = lis[i];
-            buffer(singerLi, {opacity: 0}, null);
+            // var singerLi = lis[i];
+            buffer(lis[i], {opacity: 0}, null);
         }
         buffer(lis[index], {opacity: 1}, null);
 
@@ -62,14 +62,14 @@ function bannerAutoPlay() {
         if(index === lis.length){
             index = 0;
         }
-    }, 2000);
+    }, 4000);
 }
 
 /**
  * 自动创建图片
  */
 function autoCreateImg() {
-    // 1.1 数据
+    // 1.1 数据，以30条数据为例
     var json = [
         {txt: '当我们正在为生活疲于奔命的时候，生活已经离我们而去。——约翰·列侬', pic: 'images/0.jpg'},
         {txt: '活在世上，不必什么都知道，只知道最好的就够了。——王小波', pic: 'images/1.jpg'},
@@ -102,12 +102,11 @@ function autoCreateImg() {
         {txt: '水来，我在水中等你；火来，我在灰烬中等你。——《你是我的独家记忆》', pic: 'images/28.jpg'},
         {txt: '天下就没有偶然，那不过是化了妆的，戴了面具的必然。——钱钟书', pic: 'images/29.jpg'}
     ], str, txt, pic, htmlStr;
-
     // 1.2 遍历
-    for (var i = 0; i < 30; i++) {
+    for (var i = 0; i < 2; i++) {
         // 1.2.0 获取父标签的文本
         str = $("dom_pull").innerHTML;
-
+        // console.log(str);
         // 1.2.1 取出图片的地址和文字
         txt = json[i].txt;
         pic = json[i].pic;
@@ -136,15 +135,12 @@ function autoCreateImg() {
             wrapBox[j].onmouseover = function () {
                 this.childNodes[2].style.display = "block";
             };
-
             wrapBox[j].onmouseout = function () {
                 this.childNodes[2].style.display = "none";
             };
-
             wrappic[j].onmouseover = function () {
                 this.childNodes[1].style.display = "block";
             };
-
             wrappic[j].onmouseout = function () {
                 this.childNodes[1].style.display = "none";
             }
@@ -159,11 +155,27 @@ function tab() {
     // 1. 获取需要的标签
     var allLis = $("tab_header").getElementsByTagName("li");
     var doms = $("tab_content").getElementsByClassName("dom");
-    var lastOne = 0;
-
-    // 2. 遍历监听
+    var lastOne = 0;  //默认显示第一项
+    // 2. 遍历监听li元素的点击事件
     for (var i = 0; i < allLis.length; i++) {
         var li = allLis[i];
+        /*
+            最原始的方法，遵循排他的原则
+            allLis[i].index = i;
+            allLis[i].onclick = function () {
+                console.log(this.index);
+                for (var j = 0; j < allLis.length; j++) {
+                    allLis[j].className = "";
+                }
+                this.className = "current";
+                for (var i = 0; i < doms.length; i++) {
+                    doms[i].style.display = "none";
+                }
+                doms[this.index].style.display = "block";
+
+            }
+        */
+        //闭包函数自调用
         (function (i) {
             li.onmousedown = function () {
                 // 1. 清除样式
@@ -177,9 +189,9 @@ function tab() {
             }
         })(i);
     }
-
 }
 
+//定义一个类似jQuery的方法，来获取dom元素
 function $(id) {
     return typeof id === "string" ? document.getElementById(id) : null;
 }
