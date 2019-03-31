@@ -32,7 +32,7 @@ function waterFull(parent, child) {
             // console.log(heightArr);
             // 1. 取出最矮的盒子高度
             minBoxHeight = _.min(heightArr);
-            console.log(minBoxHeight);
+            // console.log(minBoxHeight);
             // 2. 求出最矮盒子对应的索引
             minBoxIndex = getMinBoxIndex(heightArr, minBoxHeight);
             // 3. 子盒子定位
@@ -46,7 +46,8 @@ function waterFull(parent, child) {
 
     // 5. 更新父盒子的高度
     var parentHeight = allBox[allBox.length - 1].offsetTop + allBox[allBox.length - 1].offsetHeight;
-    $(parent).style.height = parentHeight;
+    $(parent).style.height = parentHeight + "px";
+
 }
 /**
  * 获取数组中最矮盒子高度的索引

@@ -102,8 +102,11 @@ function autoCreateImg() {
         {txt: '水来，我在水中等你；火来，我在灰烬中等你。——《你是我的独家记忆》', pic: 'images/28.jpg'},
         {txt: '天下就没有偶然，那不过是化了妆的，戴了面具的必然。——钱钟书', pic: 'images/29.jpg'}
     ], str, txt, pic, htmlStr;
+    // console.log($("dom_pull").getElementsByClassName("box").length);
+    var num = $("dom_pull").getElementsByClassName("box").length;
+    if(num >= 60)  return;   //不要无线地加载
     // 1.2 遍历
-    for (var i = 0; i < 2; i++) {
+    for (var i = 0; i < 30; i++) {
         // 1.2.0 获取父标签的文本
         str = $("dom_pull").innerHTML;
         // console.log(str);

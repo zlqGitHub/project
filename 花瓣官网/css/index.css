@@ -684,3 +684,36 @@ html, body{
     color: #9A0000;
     text-decoration:none;
 }
+.tip{
+    width: 1224px;
+    height: 60px;
+    margin: 20px auto 0px;
+    position: relative;
+    bottom: 0;
+}
+.tio-left{
+    display: block;
+    width: 300px;
+    border-top: 1px solid #E8E8E8;
+    float: left;
+    margin-top: 22px;
+}
+.tip-info{
+    display: block;
+    width: 600px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 5px;
+    background: #F2F2F2;
+    margin: 0 auto;
+    color: #999999;
+    text-align: center;
+    cursor: pointer;
+}
+.tip-right{
+    display: block;
+    width: 300px;
+    border-top: 1px solid #E8E8E8;
+    float: right;
+    margin-top: 22px;
+}

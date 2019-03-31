@@ -121,7 +121,7 @@ function buffer(obj, json, fn) {
             }
         }
 
-    }, 60);
+    }, 20);
 }
 //获取任意元素的属性
 function getCssAttr(obj, attr) {
