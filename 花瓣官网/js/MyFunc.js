@@ -70,7 +70,7 @@ function animate(obj, target, step) {
     }, 10);
 }
 
-
+//核心就是运动框架
 function buffer(obj, json, fn) {
     // 1. 清除定时器
     clearInterval(obj.timer);
@@ -94,7 +94,7 @@ function buffer(obj, json, fn) {
                 begin = parseInt(getCssAttr(obj, k));
                 end = parseInt(json[k]);
             }
-            // 2.2.0 求出步长
+            // 2.2.0 求出步长，即速度
             var step = (end - begin) * 0.2;
             step = step >=0 ? Math.ceil(step) : Math.floor(step);
             // 2.2.1 计算起始位置
@@ -108,13 +108,11 @@ function buffer(obj, json, fn) {
             }else {
                 obj.style[k] = begin + step + 'px';
             }
-
             // 2.2.2 判断
             if(begin !== end){
                 flag = false;
             }
         }
-
         // 3.0 结束动画
         if(flag){
             clearInterval(obj.timer);
@@ -123,10 +121,10 @@ function buffer(obj, json, fn) {
                 fn();
             }
         }
+
     }, 60);
 }
-
-
+//获取任意元素的属性
 function getCssAttr(obj, attr) {
     if(obj.currentStyle){ // IE 和 Opera
         return obj.currentStyle[attr];
