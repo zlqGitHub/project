@@ -87,11 +87,11 @@ $(function () {
        */
         //生成随机位置
         var wolfPosIndex=Math.round(Math.random()*8);
-        $wolfImage=$("<image src='' class='wolfImage'>")
+        $wolfImage=$("<image src='' class='wolfImage'>")  //定义一个jQuery对象，将来给dom中添加
         $wolfImage.css({
             position:"absolute",
             left:arrPos[wolfPosIndex].left,
-            top:arrPos[wolfPosIndex].top
+            top:arrPos[wolfPosIndex].top,
         })
         //随机获取狼的类型，改进：我们可以通过三元目判断条件来获取
         var wolfType=Math.round(Math.random())==0?wolf_1:wolf_2
@@ -116,7 +116,7 @@ $(function () {
             }
 
         },200)
-        $(".container").append($wolfImage)
+        $(".container").append($wolfImage);
         gameRules($wolfImage);
     }
 
