@@ -302,7 +302,7 @@ $(function(){
                    "<a href='javascript:;' title='删除' class='del'></a>"+
                  "</div>"+
                "</li>");
-		//便于获取歌曲
+		//给当前元素添加index、music属性，便于获取歌曲
 		$item.get(0).index = index;
 		$item.get(0).music = music;
 		return $item;
