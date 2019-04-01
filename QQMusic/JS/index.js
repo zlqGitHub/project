@@ -263,7 +263,7 @@ $(function(){
 	    	//滚动起来
 	    	if(index <= 2) return;
 	    	$(".song-lyric").css({
-	    		marginTop: (-index+2)*30
+	    		marginTop: (-index+4)*30
 	    	});
 	    });
 
