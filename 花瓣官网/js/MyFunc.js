@@ -25,11 +25,11 @@ function show(obj) {
     return obj.style.display = 'block';
 }
 
-
 function hide(obj) {
     return obj.style.display = 'none';
 }
 
+//获取内容的可视高度
 function client() {
     if(window.innerWidth){ // IE9+ 和 最新的浏览器
         return {

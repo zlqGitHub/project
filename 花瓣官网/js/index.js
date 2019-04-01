@@ -178,7 +178,7 @@ function tab() {
 
             }
         */
-        //闭包函数自调用
+        //闭包函数自调用,给每个li元素绑定一个鼠标按下事件
         (function (i) {
             li.onmousedown = function () {
                 // 1. 清除样式
