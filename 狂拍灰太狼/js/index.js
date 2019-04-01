@@ -123,7 +123,7 @@ $(function () {
     //处理游戏规则的方法
     function gameRules($wolfImage) {  //参数为当前显示到狼的元素
         $wolfImage.one("click",function () {
-            //点击，改变索引，即停止当前动画，改为拍打动画（5-9）
+            //点击，改变索引，即停止当前动画（停止狼的上升动画，改变为拍打到狼的动画），改为拍打动画（5-9）
             window.wolfStartIndex=5;
             window.wolfEndIndex=9;
             //获取图片的地址
